@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Activities</title>
+    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="/styles/ActStyles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="nav" onclick="location.href = '../index.html'">
+            <i data-lucide="house"></i>
+            <h3>Home</h3>
+        </div>
+        <div class="nav active">
+            <i data-lucide="history"></i>
+            <h3>Activities</h3>
+        </div>
+        <div class="nav" onclick="location.href = 'budgets.html'">
+            <i data-lucide="chart-pie"></i>
+            <h3>Budgets</h3>
+        </div>
+        <div class="nav">
+            <i data-lucide="square-kanban"></i>
+            <h3>Reports</h3>
+        </div>
+        <div class="nav">
+            <i data-lucide="settings"></i>
+            <h3>Settings</h3>
+        </div>
+    </div>
+    <div class="upperSection">
+        <i data-lucide="moon" id="darkmode"></i>
+        <i data-lucide="circle-user-round"></i>
+        <i data-lucide="bell"></i>
+        <input type="text" placeholder="Search" />
+    </div>
+    <div class="actContainer" id="actPage">
+        <h3 class="head">My Activites</h3>
+        <div class="cards" id="cards">
+            
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="/JS/main.js"></script>
+</body>
+</html>

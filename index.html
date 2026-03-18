@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Expense Tracker</title>
+    <link rel="icon" href="favicon.png">
+</head>
+
+<body>
+    <div class="sidebar">
+        <div class="nav active">
+            <i data-lucide="house"></i>
+            <h3>Home</h3>
+        </div>
+        <div class="nav" onclick="location.href = 'pages/actvities.html'">
+            <i data-lucide="history"></i>
+            <h3>Activities</h3>
+        </div>
+        <div class="nav" onclick="location.href = 'pages/budgets.html'">
+            <i data-lucide="chart-pie"></i>
+            <h3>Budgets</h3>
+        </div>
+        <div class="nav">
+            <i data-lucide="square-kanban"></i>
+            <h3>Reports</h3>
+        </div>
+        <div class="nav">
+            <i data-lucide="settings"></i>
+            <h3>Settings</h3>
+        </div>
+    </div>
+    <div class="upperSection">
+        <i data-lucide="moon" id="darkmode"></i>
+        <i data-lucide="circle-user-round"></i>
+        <i data-lucide="bell"></i>
+        <input type="text" placeholder="Search" />
+    </div>
+    <div class="container" id="container">
+        <div style="grid-area: box-1" class="balanceBox">
+            <h3>Financial Pluse & Savings Goal</h3>
+            <h4>Current Monthly Balance :</h4>
+            <h1 id="balance">0 EGP</h1>
+        </div>
+        <div style="grid-area: box-2" class="transaction">
+            <div class="modeBtns">
+                <button class="income" id="income"><i data-lucide="arrow-up"></i> Income</button>
+                <button class="expense" id="expense"><i data-lucide="arrow-down"></i> Expense</button>
+            </div>
+            <div class="inputs">
+                <div >
+                    <span>Name</span><br>
+                    <input class="name" type="text" placeholder="e.g, Grocery Store" id="name"/>
+                </div>
+                <div>
+                    <span>Date</span><br>
+                    <input type="date" class="smInputs" id="date"/>
+                </div>
+                <div>
+                    <span>Amount</span><br>
+                    <input type="number" placeholder="e.g,50.00"class="smInputs" id="amount"/>
+                </div>
+                <div>
+                    <span>Category</span><br>
+                    <select class="smInputs" id="CI">
+                        <option value="Select Category">Select Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Other">Other...</option>
+
+                    </select>
+                    
+                </div>
+                <div>
+                    <button id="addTransaction">Add Transaction</button>
+                </div>
+                
+            </div>
+        </div>
+        <div style="grid-area: box-3" class="budgetsBox">
+            <h3>Monthly Budgets Tracker</h3>
+            <div class="inputs">
+                <div class="categoryDiv">
+                    <h5>Category</h5>
+                    <select id="category">
+                        <option value="Select a Category">Select a Category</option>
+                        <option value="Food">Food</option>
+                        <option value="Bills">Bills</option>
+                        <option value="Shopping">Shopping</option>
+                    </select>
+                </div>
+                <div class="limitDiv">
+                    <h5>Set Limit</h5>
+                    <input type="text" placeholder="e.g.,2000" id="limitInput">
+                </div>
+            </div>
+            <button id="budgetBtn">Create Budget</button>
+            <div class="budgets" id="budgetBox">
+                
+                
+                
+                
+            </div>
+        </div>
+        <div style="grid-area: box-4" class="activities">
+            <div class="activities-header">
+                <h3>My Activites</h3>
+                <a href="/pages/actvities.html" id="viewAll">View All Activity<i data-lucide="arrow-right"></i> </a>
+            </div>
+            <div class="activityBox" id="activityBox">
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="JS/main.js"></script>
+</body>
+
+</html>
